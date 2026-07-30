@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EightK</title>
+</head>
+<body>
+    <script>
+        let result;
+        let guess;
+        let resultflag;
+        let score = JSON.parse(localStorage.getItem('score')) || {
+            wins: 0,
+            losses: 0,
+        };
+        function playGame(guess, headOrTail)
+        {
+            flag = (guess === 0)?'Head':'Tail';
+            result = Math.floor(Math.random() * 2);
+            resultflag = (result === 0)?'Head':'Tail';
+            if (result === guess)
+            {
+                score.wins += 1;
+                alert(`You picked ${flag}. Computer picked ${resultflag}. You win.\nWins: ${score.wins}, Losses: ${score.losses}`);
+            }
+            else
+            {
+                score.losses += 1;
+                alert(`You picked ${flag}. Computer picked ${resultflag}. You lose.\nWins: ${score.wins}, Losses: ${score.losses}`);
+            }
+            localStorage.setItem('score', JSON.stringify(score));    
+        }
+    </script>
+    <p>Guess Head or Tail?</p>
+    <button onclick="
+    guess = 0;
+    playGame(guess, 'Head');">Head</button>
+    <button onclick="
+    guess = 1;
+    playGame(guess, 'Tail')">Tail</button>
+    <button onclick="
+    score.wins = 0;
+    score.losses = 0;
+    localStorage.removeItem('score');">Reset Score</button>
+</body>
+</html>

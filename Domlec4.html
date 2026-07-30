@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--<a href="#">visit Yahoo</a>-->
+    <div id="my-div">
+        <h1>Hello</h1>
+        <h1>Welcome to my channel</h1>
+    </div>
+    <script>
+        let division = document.getElementById('my-div');
+        division.style.backgroundColor = 'red';
+
+        let headingOne = document.createElement('h1');
+        let textOne = document.createTextNode('Thank you!');
+        headingOne.appendChild(textOne);
+
+        division.appendChild(headingOne);
+        let welcome = document.getElementsByTagName('h1')[1];
+        division.removeChild(welcome);
+
+        let love = document.createElement('h1');
+        let loveText = document.createTextNode('love is infinite');
+        love.appendChild(loveText);
+
+        let thank = document.getElementsByTagName('h1')[1];
+        division.insertBefore(love, thank);
+    </script>
+</body>
+</html>

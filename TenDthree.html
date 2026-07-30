@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button {
+            font-family: Arial;
+            font-size: 12px;
+            background-color: rgba(0, 0, 0, 0.1);
+            border: none;
+            padding: 5px 10px;
+            border-radius: 3px;
+        }
+        .on {
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="
+    buttOn();">Game</button>
+    <script>
+        let value = document.querySelector('button');
+        function buttOn()
+        {
+            if (!value.classList.contains('on'))
+            {
+                value.classList.add('on');
+                value.innerHTML = 'Gaming';
+            }
+            else
+            {
+                value.innerHTML = 'Game';
+                value.classList.remove('on');
+            }
+        }
+    </script>
+</body>
+</html>

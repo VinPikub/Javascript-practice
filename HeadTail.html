@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Head or Tail</title>
+</head>
+<body>
+    <script>
+        let result;
+        let guess;
+        let resultflag;
+    </script>
+    <p>Guess Head or Tail?</p>
+    <button onclick="
+    result = Math.floor(Math.random() * 2);
+    guess = 0;
+    resultflag = (result === 0)?'Head':'Tail';
+    (result === guess)?alert(`You picked Head. Computer picked ${resultflag}. You win`):alert(`You picked Head. Computer picked ${resultflag}. You lose.`);
+    ">Head</button>
+    <button onclick="
+    result= Math.floor(Math.random() * 2);
+    guess = 1;
+    (result === guess)?alert('You win'):alert('You lose');">Tail</button>
+</body>
+</html>

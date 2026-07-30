@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator Project</title>
+    <style>
+        div {
+            margin-bottom: 10px;
+        }
+        body {
+            font-family: Arial;
+        }
+    </style>
+</head>
+<body>
+    <p>Calculator</p>
+    <script>
+        let variable=localStorage.getItem('value') || '';
+        function displayOutput(number)
+        {
+            if(number>= 0 && number<=9)
+                variable += number;
+            else
+                variable += ' ' + number + ' ';
+            console.log(variable);
+        }
+    </script>
+    <div>
+        <button onclick="
+        displayOutput(1)">1</button>
+        <button onclick="
+        displayOutput(2)">2</button>
+        <button onclick="
+        displayOutput(3)">3</button>
+        <button onclick="
+        displayOutput('+')">+</button>
+    </div>
+    <div>
+        <button onclick="
+        displayOutput(4)">4</button>
+        <button onclick="
+        displayOutput(5)">5</button>
+        <button onclick="
+        displayOutput(6)">6</button>
+        <button onclick="
+        displayOutput('-')">-</button>
+    </div>
+    <div>
+        <button onclick="
+        displayOutput(7)">7</button>
+        <button onclick="
+        displayOutput(8)">8</button>
+        <button onclick="
+        displayOutput(9)">9</button>
+        <button onclick="
+        displayOutput('*')">*</button>
+    </div>
+    <div>
+        <button onclick="
+        displayOutput(0)">0</button>
+        <button onclick="
+        displayOutput('.')">.</button>
+        <button onclick="
+        variable = eval(variable);
+        localStorage.setItem('value', JSON.stringify(variable));
+        console.log(variable);
+        variable = variable + '';">=</button>
+        <button onclick="
+        displayOutput('/')">/</button>
+    </div>
+    <button style="margin-top: 5px;" onclick="
+    variable ='';
+    localStorage.removeItem('value');
+    console.log('Cleared');">Clear</button>
+</body>
+</html>

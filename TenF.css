@@ -1,0 +1,13 @@
+        button {
+            font-family: Arial;
+            font-size: 10px;
+            background-color: rgba(0, 0, 0, 0.1);
+            border: none;
+            padding: 7px 10px;
+            border-radius: 3px;
+            margin-right: 5px;
+        }
+        .on {
+            background-color: black;
+            color: white;
+        }

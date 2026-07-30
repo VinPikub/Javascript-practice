@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Six K</title>
+</head>
+<body>
+    <script>
+        let variable = 0;
+        function updateItem(value)
+        {
+            if (variable + value >10)
+            {
+                alert('Invalid');
+                return 0;
+            }
+            else if (variable + value < 0)
+            {
+                alert('Invalid');
+                return 0;
+            }
+            variable+= value;
+            console.log(`Cart quantity: ${variable}`);
+        }
+    </script>
+    <p>Cart Quantity</p>
+    <button onclick="
+    console.log(`Cart quantity: ${variable}`);">Show Quantity</button>
+    <button onclick="
+    updateItem(1);">Add to Cart</button>
+    <button onclick="
+    updateItem(2);">+2</button>
+    <button onclick="
+    updateItem(3);">+3</button>
+    <button onclick="
+    updateItem(-1)">Remove from cart</button>
+    <button onclick="
+    updateItem(-2);"">-2</button>
+    <button onclick="
+    updateItem(-3);">-3</button>    
+    <button onclick="
+    variable = 0;
+    console.log('Cart was reset');
+    console.log(`Cart quantity: ${variable}`);">Reset Cart</button>
+</body>
+</html>

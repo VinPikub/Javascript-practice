@@ -1,0 +1,42 @@
+<!--DOM: Document Object Model-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+    <h1 id="mine">Hi this is me!</h1>
+    <p id="para">This is a paragraph</p>
+    <script>
+        //console.log(document.getElementById('mine'));
+        //let jv = document.getElementById('mine');
+        //jv.innerHTML = 'Hi, this is you!';
+        document.getElementById('mine').innerHTML = 'HI, friends!';
+
+        document.getElementById('para').innerHTML = 'I like gazzle';
+        console.log(document.getElementById('para'));
+    </script>
+    -->
+    <!--
+    <h1>This is heading one</h1>
+    <h1>This is heading two</h2>
+
+    <script>
+        document.getElementsByTagName('h1')[0].innerHTML = 'I like goats';
+        let tag = document.getElementsByTagName('h1')[1];
+        tag.innerHTML = 'I like deers';
+    </script>
+    -->
+    <h1 class="header">This is heading</h1>
+    <p class="header">This is a paragraph</p>
+
+    <script>
+        document.getElementsByClassName('header')[0].innerHTML = 'This is highlighting text';
+        let value = document.getElementsByClassName('header')[1];
+        value.innerHTML = 'Paragraphs has been changed';
+    </script>
+</body>
+</html>

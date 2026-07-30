@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SevenF</title>
+</head>
+<body>
+    <script>
+        let result;
+        function convertTemperature(degrees, unit)
+        {
+            let value, temp, result;
+            if (unit === 'C')
+            {
+                value = 9*degrees/5 + 32;
+                temp = 'F'
+                //console.log(`${value}${temp}`);
+            }
+            else if (unit === 'F')
+            {
+                value = 5*(degrees - 32)/9;
+                temp = 'C'
+                //console.log(`${value}${temp}`);
+            }
+            result = value+temp;
+            return result;
+        }
+        //convertTemperature(25, 'C'); if we don't return any value
+        //convertTemperature(86, 'F'); if we dont' return any value
+        console.log(`${convertTemperature(25, 'C')}`);
+        console.log(`${convertTemperature(86, 'F')}`);
+    </script>
+</body>
+</html>

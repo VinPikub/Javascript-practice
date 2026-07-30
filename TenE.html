@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TenE</title>
+    <style>
+        button {
+            font-family: Arial;
+            font-size: 10px;
+            background-color: rgba(0, 0, 0, 0.1);
+            border: none;
+            padding: 7px 10px;
+            border-radius: 3px;
+            margin-right: 5px;
+        }
+        .on {
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <button class="game" onclick="
+    switchOn('game');">Game</button>
+    <button class="music" onclick="
+    switchOn('music');">Music</button>
+    <button class="tech" onclick="
+    switchOn('tech');">Tech</button>
+
+    <script>
+        function switchOn(className)
+        {
+            let value = document.querySelector(`.${className}`)
+            value.classList.toggle('on');
+        }
+    </script>
+</body>
+</html>

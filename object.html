@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        console.log(localStorage.getItem('message'));
+        const product ={
+            name: 'socks',
+            ['expire-date']: '1 may',
+            price: 350,
+            rating: {
+                star: 4.5,
+                count: 87
+            },
+            fun: function amiasi()
+            {
+                console.log('function inside object');
+            }
+        };
+        //console and Math are built in object in javascript
+        //json is also a built in object in javascript
+        //json is a javascript object notation
+        //a syntax similar to javascript object 
+        console.log(product['name']);
+        console.log(product['expire-date']);
+        console.log(product.rating.count);
+        console.log(product.rating.star);
+        product.fun();
+        console.log(typeof console.log);
+        const jsonstring = JSON.stringify(product);
+        console.log(jsonstring);
+        console.log(JSON.parse(jsonstring));
+        localStorage.setItem('message', 'hello');
+    </script>
+</body>
+</html>

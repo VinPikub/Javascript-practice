@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SevenG</title>
+</head>
+<body>
+    <script>
+        function convertLength(length, from, to)
+        {
+            let value, distance, result;
+            if (from === 'miles' && to === 'km')
+                value = length*1.6;
+            else if (from === 'miles' && to === 'ft')
+                value = length*5280;
+            else if (from === 'km' && to === 'miles')
+                value = length/1.6;
+            else if (from === 'km' && to === 'ft')
+                value = length*3281;
+            else if(from === 'km' && to === 'km' || from === 'miles' && to === 'miles')
+                value = length;
+            else
+                return `invalid unit: ${from}`;
+            distance = to;
+            result = value+' '+distance;
+            return result;
+        }
+        console.log(convertLength(5, 'miles', 'km'));
+        console.log(convertLength(5, 'miles', 'ft'));
+        console.log(convertLength(5, 'km', 'ft'));
+        console.log(convertLength(5, 'lbs', 'lbs'));
+    </script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Six K</title>
+</head>
+<body>
+    <script>
+        let variable = 0;
+    </script>
+    <p>Cart Quantity</p>
+    <button onclick="
+    console.log(`Cart quantity: ${variable}`);">Show Quantity</button>
+    <button onclick="
+    if (variable < 10)
+    {
+        variable += 1;
+        console.log(`Cart quantity: ${variable}`);
+    }
+    else
+        alert('\'The cart is full\' and don\'t update the quantity');">Add to Cart</button>
+    <button onclick="
+    if(variable < 9)
+    {   variable += 2;
+        console.log(`Cart quantity: ${variable}`);
+    }
+    else
+        alert('\'The cart is full\' and don\'t update the quantity');">+2</button>
+    <button onclick="
+    if(variable < 8)
+    {   variable += 3;
+        console.log(`Cart quantity: ${variable}`);
+    }
+    else
+        alert('\'The cart is full\' and don\'t update the quantity');">+3</button>
+    <button onclick="
+    if(variable > 0)
+    {
+        variable -= 1;
+        console.log(`Cart quantity: ${variable}`);
+    }
+    else
+        alert('\'Not enough items in the cart\' and don\'t update the quantity.')">Remove from cart</button>
+    <button onclick="
+    if(variable > 1)
+    {
+        variable -= 2;
+        console.log(`Cart quantity: ${variable}`);
+    }
+    else
+        alert(`'Not enough items in the cart' and don't update the quantity`)">-2</button>
+    <button onclick="
+    if(variable > 2)
+    {
+        variable -= 3;
+        console.log(`Cart quantity: ${variable}`);
+    }
+    else
+        alert(`'Not enough items in the cart' and don't update the quantity`)">-3</button>    
+    <button onclick="
+    variable = 0;
+    console.log('Cart was reset')
+    console.log(`Cart quantity: ${variable}`);">Reset Cart</button>
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+</head>
+<body>
+    <p>Rock Paper Scissor</p>
+    <script>
+        let userChoice;
+        let flag;
+        let userFlag;
+        let computerChoice;
+
+        let score = JSON.parse(localStorage.getItem('score'));
+        
+        if (!score)
+        {
+            score = {
+                wins: 0,
+                losses: 0,
+                ties: 0
+            };
+        }
+
+        function rockpaperscissor(x)
+        {
+            if (x === 0)
+                flag = 'Rock';
+            else if (x === 1)
+                flag = 'Paper';
+            else
+                flag = 'Scissor';
+        }
+        function winorlose(userFlag)
+        {
+            if(userChoice === 0 && computerChoice === 2)
+            {
+                score.wins += 1;
+                alert(`You picked ${userFlag}. Computer picked ${flag}. You win.\nWins: ${score.wins}, Losses: ${score.losses}, Ties:${score.ties}`)
+            }
+    
+            else if(userChoice === 2 && computerChoice === 0)
+            {
+                score.losses += 1;
+                alert(`You picked ${userFlag}. Computer picked ${flag}. You lose.\nWins: ${score.wins}, Losses: ${score.losses}, Ties:${score.ties}`)
+            }
+
+            else if(userChoice > computerChoice)
+            {
+                score.wins += 1;
+                alert(`You picked ${userFlag}. Computer picked ${flag}. You win.\nWins: ${score.wins}, Losses: ${score.losses}, Ties:${score.ties}`)
+            }
+    
+            else if(userChoice < computerChoice)
+            {
+                score.losses += 1;
+                alert(`You picked ${userFlag}. Computer picked ${flag}. You lose.\nWins: ${score.wins}, Losses: ${score.losses}, Ties:${score.ties}`)
+            }
+    
+            else if(userChoice === computerChoice)
+            {
+                score.ties += 1;
+                alert(`You picked ${userFlag}. Computer picked ${flag}. Tie.\nWins: ${score.wins}, Losses: ${score.losses}, Ties:${score.ties}`)
+            }
+            localStorage.setItem('score', JSON.stringify(score));
+        }
+    </script>
+    
+    <button onclick="
+    computerChoice = Math.floor(Math.random() * 3);
+    rockpaperscissor(computerChoice);
+    userChoice = 0;
+    userFlag = 'Rock';
+    winorlose(userFlag);
+    ">Rock</button>
+    
+    <button onclick="
+    computerChoice = Math.floor(Math.random() * 3);
+    rockpaperscissor(computerChoice);
+    userChoice = 1;
+    userFlag = 'Paper'
+    winorlose(userFlag);"
+    >Paper</button>
+    <button onclick="
+    computerChoice = Math.floor(Math.random() * 3);
+    rockpaperscissor(computerChoice);
+    userChoice = 2;
+    userFlag = 'Scissor'
+    winorlose(userFlag);"
+    >Scissors</button>
+    
+    <button onclick="
+    score.wins = 0;
+    score.losses = 0;
+    score.ties = 0;
+    localStorage.removeItem('score');
+    //console.log(localStorage.getItem('score'));
+    ">Reset Score</button>
+    <p><a href="https://supersimple.dev/projects/rock-paper-scissors/">Click here </a>to see the final version of the project.</p>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./domproject.css">
+    <title>DOM</title>
+</head>
+<body>
+    <script src="./domproject.js"></script>
+    <main>
+        <section>
+            <p class="youtube">YouTube Subcribe Button</p>
+            <button class="subscribe" onclick="subsCribe();">Subscribe</button>
+        </section>
+        
+        <section style="margin-top: 50px;">
+            <div class="para">
+                <p>Amazon Shipping Calculator</p>
+                <p>Orders under $40 = +$10 shipping</p>
+                <p>Orders over $40 = FREE shipping</p>
+            </div>
+            <div>
+                <!--clicks, keydowns are events
+                onclick, onkeydown are event listeners-->
+                <input class="text-box" type="text" placeholder="Cost of order" onkeydown="
+                if(event.key === 'Enter')
+                    calculate();">
+                <button class="calculate" onclick="calculate();">Calculate</button>
+                <p id="para"></p>
+            </div>
+        </section>
+
+        <section style="margin-top: 60px;">
+            <p class="rock">Rock Paper Scissors</p>
+            <a class="click" href="https://supersimple.dev/projects/rock-paper-scissors/">Click here</a>
+        </section>
+    </main>
+</body>
+</html>

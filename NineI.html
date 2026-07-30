@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nine I</title>
+</head>
+<body>
+    <script>
+        let variable = 0;
+        function updateItem(value)
+        {
+            if (variable + value >10)
+            {
+                alert('Invalid');
+                return 0;
+            }
+            else if (variable + value < 0)
+            {
+                alert('Invalid');
+                return 0;
+            }
+            variable+= value;
+            document.querySelector('#para').innerHTML = `Cart Quantity: ${variable}`;
+        }
+    </script>
+    <p>Cart Quantity</p>
+    <button onclick="
+    document.querySelector('#para').innerHTML = `Cart Quantity: ${variable}`;">Show Quantity</button>
+    <button onclick="
+    updateItem(1);">Add to Cart</button>
+    <button onclick="
+    updateItem(2);">+2</button>
+    <button onclick="
+    updateItem(3);">+3</button>
+    <button onclick="
+    updateItem(-1)">Remove from cart</button>
+    <button onclick="
+    updateItem(-2);"">-2</button>
+    <button onclick="
+    updateItem(-3);">-3</button>    
+    <button onclick="
+    variable = 0;
+    document.querySelector('#para').innerHTML = `Cart Quantity: ${variable}`;">Reset Cart</button>
+
+    <p id="para"></p>
+</body>
+</html>

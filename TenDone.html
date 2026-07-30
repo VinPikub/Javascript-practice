@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .game {
+            font-family: Arial;
+            font-size: 10px;
+            background-color: rgba(0, 0, 0, 0.1);
+            color: black;
+            border: none;
+            padding: 6px 8px;
+            border-radius: 3px;
+        }
+        .gaming {
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <button class="game js-button" onclick="
+    turnOnOff();">Game</button>
+    <script>
+        let butt = document.querySelector('.js-button');
+        function turnOnOff()
+        {
+            if (butt.innerHTML === 'Game')
+            {
+                butt.innerHTML = 'Gaming';
+                butt.classList.add('gaming');
+            }
+            else
+            {
+                butt.innerHTML = 'Game';
+                butt.classList.remove('gaming');
+            }
+        }
+    </script>
+</body>
+</html>

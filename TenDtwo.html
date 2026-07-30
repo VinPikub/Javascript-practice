@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TenD Two</title>
+    <style>
+        .game {
+            font-family: Arial;
+            font-size: 12px;
+            padding: 5px 9px;
+            background-color: rgb(0, 0, 0, 0.1);
+            border: none;
+            border-radius: 3px;
+        }
+        .gaming {
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <button class="game" onclick="
+    buttonOnOff();">Game</button>
+    <script>
+        let value = document.querySelector('.game');
+        function buttonOnOff()
+        {
+            if(value.innerHTML === 'Game')
+                value.innerHTML = 'Gaming';
+            else
+                value.innerHTML = 'Game';
+            value.classList.toggle('gaming');
+        }
+    </script>
+</body>
+</html>
