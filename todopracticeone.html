@@ -12,7 +12,9 @@
     <button onclick="
     enteredValue.push(document.querySelector('input').value);
     document.querySelector('input').value = '';
-    console.log(enteredValue);">Add</button>
+    document.querySelector('#show').innerHTML = enteredValue[0];
+    enteredValue.pop();">Add</button>
+    <p id="show"></p>
     <script>
         let enteredValue = [];
     </script>

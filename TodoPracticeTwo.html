@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./todo.css">
+    <title>Document</title>
+</head>
+<body>
+    <p>Todo List Practice 2</p>
+    <input id="input" type="text" placeholder="Todo name">
+    <button onclick="
+    enteredValue.push(document.querySelector('input').value);
+    document.querySelector('input').value = '';
+    let showText = '';
+    for(let i =0; i<enteredValue.length; i++)
+    {
+        let html = `<p>${enteredValue[i]}<\p>`;
+        showText += html;
+    }
+    let value = document.querySelector('#show');
+    value.innerHTML = showText;">Add</button>
+    <div id="show"></div>
+    <script>
+        let enteredValue = [];
+    </script>
+</body>
+</html>

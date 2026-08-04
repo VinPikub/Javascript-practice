@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function addNum(array, num)
+        {
+            let finalArray = [];
+            for(let i = 0; i<array.length; i++)
+                finalArray.push(array[i] + num);
+            return finalArray;
+        }
+        let firstArray = [-2, -1, 0, 99];
+        let secondArray = addNum(firstArray, 2);
+        console.log(secondArray);
+    </script>
+</body>
+</html>
