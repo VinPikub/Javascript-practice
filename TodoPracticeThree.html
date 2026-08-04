@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Todo List Practice 2</p>
+    <input id="input" type="text" placeholder="Todo name">
+    <button onclick="
+    enteredValue.push(document.querySelector('input').value);
+    document.querySelector('input').value = '';
+    todoFunc();
+    ">Add</button>
+    <div id="show"></div>
+    <script>
+        let enteredValue = [];
+        function todoFunc(){
+        let showText = '';
+        for(let i =0; i<enteredValue.length; i++)
+        {
+            let todo = enteredValue[i];
+            let html = `<p>
+                        ${todo} <button onclick="
+                        enteredValue.splice(${i}, 1);
+                        todoFunc();
+                        ">Delete</button>
+                        </p>`;
+            showText += html;
+        }
+        let value = document.querySelector('#show');
+        value.innerHTML = showText;
+    }
+    </script>
+</body>
+</html>
