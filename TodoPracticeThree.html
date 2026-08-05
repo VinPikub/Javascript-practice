@@ -27,13 +27,16 @@
         for(let i =0; i<enteredValue.length; i++)
         {
             let todo = enteredValue[i];
-            let html = `<p id="para">
+            if(todo.name!='' && todo.due!='')
+            {
+                let html = `<p id="para">
                         ${todo.name} ${todo.due}<button id="delete" onclick="
                         enteredValue.splice(${i}, 1);
                         todoFunc();
                         ">Delete</button>
                         </p>`;
-            showText += html;
+                showText += html;
+            }
         }
         let value = document.querySelector('#show');
         value.innerHTML = showText;
