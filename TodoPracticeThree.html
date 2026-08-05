@@ -8,9 +8,15 @@
 <body>
     <p>Todo List Practice 2</p>
     <input id="input" type="text" placeholder="Todo name">
-    <button onclick="
-    enteredValue.push(document.querySelector('input').value);
-    document.querySelector('input').value = '';
+    <input id="due" type="date">
+    <button id="add" onclick="
+    let name = document.querySelector('#input').value;
+    let due = document.querySelector('#due').value;
+    enteredValue.push({name: name,
+        due: due
+    });
+    document.querySelector('#input').value = '';
+    document.querySelector('#due').value = '';
     todoFunc();
     ">Add</button>
     <div id="show"></div>
@@ -21,8 +27,8 @@
         for(let i =0; i<enteredValue.length; i++)
         {
             let todo = enteredValue[i];
-            let html = `<p>
-                        ${todo} <button onclick="
+            let html = `<p id="para">
+                        ${todo.name} ${todo.due}<button id="delete" onclick="
                         enteredValue.splice(${i}, 1);
                         todoFunc();
                         ">Delete</button>
