@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function removeEgg(paraString)
+        {
+            let outputString = [];
+            let count = 0;
+            paraString.reverse();
+            for(let i = 0; i<paraString.length; i++)
+            {
+                if(paraString[i] === 'egg')
+                {
+                    count++;
+                    if(count > 2)
+                        outputString.push(paraString[i]);
+                }
+                else
+                    outputString.push(paraString[i]);
+            }
+            return outputString.reverse();
+        }
+        const foods = ['egg', 'apple', 'egg', 'egg', 'ham'];
+        let newString = foods.slice();
+        console.log(removeEgg(newString));
+        console.log(foods);
+    </script>
+</body>
+</html>
