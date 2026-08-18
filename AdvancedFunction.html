@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advanced Function</title>
+</head>
+<body>
+  <script>
+    let function1 = function() {
+      console.log("hello");
+    }
+    console.log(function1);
+    function1();
+    let obj = {
+      num: 2,
+      fun: function sayHi(){
+        console.log("Hi");
+      }
+    };
+    obj.fun();
+    function pass(para)
+    {
+      console.log(para);
+    }
+    pass(2);
+    function passFun(param)
+    {
+      param();
+    }
+    passFun(function(){
+      console.log("Thank you!");
+    });
+
+    setTimeout(function(){
+      console.log("Be patient");
+      console.log("timeout");
+    }, 3000);
+    console.log("A message will be displayed");
+
+    setInterval(function() {
+      console.log('interval1');
+    }, 3000);
+    console.log('next line');
+  </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>11w</title>
+</head>
+<body>
+    <script>
+        function unique(arrayString)
+        {
+            let newString = [];
+            let flagString = [];
+            for(let i = 0; i<arrayString.length; i++)
+            {
+                let flag = 0;
+                for(let j = 0; j<flagString.length; j++)
+                {
+                    if(flagString[j] === arrayString[i])//green, red, blue, red
+                    {
+                        flag = 1;
+                        break;
+                    }
+                }
+                if(flag === 0)
+                    newString.push(arrayString[i]);
+                flagString.push(arrayString[i]);
+            }
+            return newString;
+        }
+        console.log(unique(['green', 'red', 'blue', 'red']));
+        console.log(unique(['red', 'green', 'green', 'red']));
+        console.log(unique(['car', 'cycle', 'honda', 'cycle', 'bus', 'truck', 'honda', 'rickshaw']));
+    </script>
+</body>
+</html>

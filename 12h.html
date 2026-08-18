@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App</title>
+</head>
+<body>
+    <button onclick="
+        addFunc();">Add</button>
+    <button onclick="
+        removeFunc();">Remove</button>
+    <script>
+        let value = 2;
+        setInterval(function(){
+            document.title = "App";
+        }, 1000);
+        setInterval(function(){
+            if(value === 0)
+            {
+                document.title = "App";
+                return;
+            }
+            document.title = `(${value}) New messages`;
+        }, 2000);
+        function addFunc(){
+            value++;
+        }
+        function removeFunc(){
+            value--;
+        }
+    </script>
+</body>
+</html>
