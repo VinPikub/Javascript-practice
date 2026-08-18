@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .my-class {
+        font-family: Arial;
+        color: tomato;
+    }
+    </style>
+</head>
+<body>
+    <button>click</button>
+    <p>I miss Bangladesh</p>
+    <script>
+            document.querySelector('button').addEventListener("click", myFunc);
+            function myFunc(){
+                alert("hello");
+            }
+            document.querySelector('p').addEventListener("mouseover", () => {
+                document.querySelector('p').classList.add('my-class');
+            });
+            document.querySelector('p').addEventListener("mouseout", () => {
+                document.querySelector('p').classList.remove('my-class');
+            })
+    </script>
+</body>
+</html>

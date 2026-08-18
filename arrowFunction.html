@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const regularFunction = function(param, param2){
+            console.log('hello');
+            return 5;
+        }
+
+        const arrowFunction = (param, param2) => {
+            console.log('hello');
+            return 5;
+        }
+        arrowFunction();
+        regularFunction();
+
+        /*
+        const oneParam = (para) => {
+            console.log(para+1);
+        };*/
+        //The arrow function above can also be defined like below
+        const oneParam = para => {
+            console.log(para+1);
+        };
+        oneParam(2);
+        /*
+        const oneLine = () => {
+            return (2+3);
+        };
+        */
+        //The function above can also be defined like below
+        const oneLine = () => 2 + 3;
+        console.log(oneLine());
+
+        const object2 = {
+            /*method: () => {
+
+            }*/
+           method() {
+            console.log("hello from shorthand method");
+           }
+        }
+    </script>
+</body>
+</html>
